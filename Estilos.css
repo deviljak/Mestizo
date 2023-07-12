@@ -1,72 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@keyframes slidein {
+  100% {
+    letter-spacing: 10px;
+  }
+
+  50% {
+    letter-spacing: 3px;
+  }
+
+  0% {
+    letter-spacing: 10px;
+  }
+
+}
+
+
+/*CUERPO*/
 body {
   margin: 0;
   padding: 0;
   background-image: url("https://mestizo.server1.trinchera.dev/wp-content/uploads/2023/07/Fonod.png");
   background-repeat: no-repeat;
-  background-size: cover; 
-
+  background-size: cover;
+  display: ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
 }
 
-.contenedor {
-  height: 100vh;
+main {
+  width: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow-y:scroll;
   scroll-snap-type: y mandatory;
-
 }
 
-section {
+.secciones {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-stop: always;
   scroll-snap-align: start;
-}
-
-section>div {
-height: 100vh;
-width: 90%;
-display: flex;
-flex-direction: row;
-justify-content:space-between;
-align-items: center;
-}
-
-.logo  {
-  width: 100%;
-}
-
-.logo-mini {
-  width: 100px;
-}
-
-.social {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 10px;
-}
-
-.izquierda {
-  display: flex;
-  height: 80vh;
-  width: 15%;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.centro {
-  display: flex;
-  height: 80vh;
-  width: 60%;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.derecha {
-  display: flex;
-  height: 80vh;
-  width: 15%;
-  flex-direction: column;
-  justify-content: center;
+  scroll-snap-stop: always;
 }

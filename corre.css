@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://mestizo.server1.trinchera.dev/wp-content/uploads/2023/07/Fonod.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .contenedor {
+    height: 100vh;
+    overflow-y:scroll;
+    scroll-snap-type: y mandatory;
+  
+  }
+  
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+  }
+  
+  .uno {
+  height: 100vh;
+  max-width: 1200px;
+  width: auto;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  }
+  
+  .dos {
+    height: 100vh;
+    max-width: 1200px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .presentacion {
+    width: 400px;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: right;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform:uppercase;
+  }
+  
+  #texto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform:uppercase;
+  }
+  
+  .scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .habilidades {
+    width: 400px;
+    align-items: start;
+  }
+  
+  #css {
+    background-color: white;
+    width: 85%;
+  }
+  
+  .texto-vertical {
+    writing-mode: vertical-rl;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    animation-duration: 10s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    color: white;
+  }
+  
+  .logo  {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+  }
+  
+  .logo-mini {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .izquierda {
+    position: absolute;
+    left: 10vh;
+    display: flex;
+    height: 80vh;
+    width: 13%;
+    flex-direction: column;
+    justify-content: space-between;
+  
+  }
+  
+  .centro {
+    display: flex;
+    height: 80vh;
+    max-width: 1200px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .derecha {
+    position: absolute;
+    right: 10vh;
+    display: flex;
+    height: 80vh;
+    width: 13%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
