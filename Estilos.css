@@ -1,45 +1,154 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+/*Animaciones*/
 @keyframes slidein {
-  100% {
-    letter-spacing: 10px;
-  }
+100% {
+  letter-spacing: 10px;
+}
 
-  50% {
-    letter-spacing: 3px;
-  }
+50% {
+  letter-spacing: 3px;
+}
 
-  0% {
-    letter-spacing: 10px;
-  }
+0% {
+  letter-spacing: 10px;
+}
 
 }
+
+
+
+
+
+/*BOTONES*/
+/*Redes sociales*/
+.icono {
+  transition: all 300ms;
+  color: white;
+  border-bottom: 1px;
+}
+.icono:hover {
+  color: darkgray;
+  transform:translateY(-2px);
+}
+
+/*Menu*/
+button{
+  color: white;
+  background-color: transparent;
+  border: 0;
+  font-family: roboto;
+  letter-spacing: 1px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+
+
 
 
 /*CUERPO*/
 body {
-  margin: 0;
-  padding: 0;
+  margin: auto;
   background-image: url("https://mestizo.server1.trinchera.dev/wp-content/uploads/2023/07/Fonod.png");
   background-repeat: no-repeat;
   background-size: cover;
-  display: ;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vh;
 }
 
+
+
+
+
+/*SNAP SCROLL Y TAMAÑO PREDEFINIDO*/
 main {
-  width: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow-y:scroll;
+  height: 100vh;
   scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 .secciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+
+
+
+
+/*CABECERA FIJA*/
+/*Estructura*/
+.izquierda,.derecha {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 10vh;
+  width: 150px;
+  height: 80vh;
+}
+
+.izquierda img,.derecha img {
+  width: 150px;
+  height: auto;
+}
+
+.izquierda{
+  left: 20vh;
+  align-items: start;
+}
+
+.derecha {
+  right: 20vh;
+  align-items: end;
+}
+
+/*Contenido*/
+.sociales {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 18px;
+  gap: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.flecha {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+}
+
+#flecha {
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: -3px;
+  color: white;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+p {
+  writing-mode: vertical-lr;
+  color: white;
+  font-family: roboto;
+  line-height: 15px;
+  animation: slidein;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
