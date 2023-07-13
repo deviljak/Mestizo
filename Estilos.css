@@ -16,6 +16,20 @@
 
 }
 
+@keyframes habilidad {
+  100% {
+    translate:0 5px 0;
+  }
+  
+  50% {
+    translate:0 -5px 0;
+  }
+  
+  0% {
+    translate:0 5px 0;
+  }
+  
+  }
 
 
 
@@ -144,7 +158,7 @@ main {
   font-size: 30px;
 }
 
-p {
+.scroll p{
   margin: 2.5px;
   writing-mode: vertical-lr;
   color: white;
@@ -164,7 +178,7 @@ p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 90vh;
+  width: 100vh;
 
 }
 
@@ -174,10 +188,81 @@ img {
 }
 
 /*Habilidades*/
+#uno,#dos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  padding: 10px;
+  height: 35vh;
+}
+
 #uno {
+  gap: 10px;
   width: 50%;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px 1px rgb(0, 0, 0, 0.3);
+  border-radius: 4vh;
 }
 
 #dos {
   width: 50%;
+}
+
+.caja-habilidad {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10vh;
+  padding: 15px; 
+  background-color: rgba(19, 19, 19, 0.89);
+  animation-name: habilidad;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+/*Barras*/
+.titulo-habilidad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 14px;
+}
+
+p {
+  color: white;
+  font-family: roboto;
+  margin: 0;
+  font-size: 16px;
+}
+
+.fondo-barra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  height: 6.9px;
+}
+
+.barra {
+  height: 7px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+#html.barra  {
+  width: 95%;
+}
+
+#elementor.barra  {
+  width: 100%;
+}
+
+#css.barra  {
+  width: 85%;
+}
+
+#wordpress.barra  {
+  width: 100%;
 }
