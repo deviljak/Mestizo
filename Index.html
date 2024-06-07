@@ -30,8 +30,8 @@
             <form><button class="btn-close" popovertarget="menu" popovertargetaction="toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></form>
             <nav>
                 <form>
-                    <button class="btn-menu">Inicio</button>
-                    <button class="btn-menu">Portafolios</button>
+                    <button type="button" onclick="window.location.href='/#inicio'" class="btn-menu">Inicio</button>
+                    <button type="button" onclick="window.location.href='/#sobre-mi'"  class="btn-menu">Portafolios</button>
                     <button class="btn-menu">Sobre Mi</button>
                     <button class="btn-menu">Contactame</button>
                 </form>
@@ -49,10 +49,8 @@
 
     <!--Contenido-->
     <main class="contenedor">
-        <div class="slide" style="border:solid 1px black; height: 100vh;"> seccion 1</div>
-        <div class="slide" style="border:solid 1px black; height: 100vh;"> seccion 2</div>
-        <div class="slide" style="border:solid 1px black; height: 100vh;"> seccion 3</div>
-        <div class="slide" style="border:solid 1px black; height: 100vh;"> seccion 4</div>
+        <div id="inicio" class="slide" style="height: 100vh;"> seccion 1</div>
+        <div id="sobre-mi" class="slide"  style="height: 100vh; background: rebeccapurple;"> seccion 1</div>
     </main>
 
 
