@@ -1,19 +1,147 @@
 :root {
-    --color-primario: rgb(20, 20, 20);
+    --color-primario: #161616;
 }
 
 * {
     margin: 0;
     padding: 0;
+    font-family: poppins;
+}
+
+:focus-visible {
+    outline: none;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
+/*BOTONES*/
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+    margin: none;
+    background: none;
+    box-shadow: none;
+    border: none;
+    overflow: hidden;
+}
+
+    /*Boton 90°*/
+    .btn-90 {
+        color: var(--color-primario);
+        background-color: rgb(247, 247, 247);
+        width: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        gap: 10px;
+        transition: all 0.5s 0s;
+        padding-bottom: 9px;
+    }
+
+        .btn-90>svg {
+            transform: rotate(90deg);
+        }
+        
+        .btn-90::before  {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-primario);
+            transform: translateY(100%);
+            transition: all 0.3s;
+            z-index: -150;
+        }
+
+        .btn-90:hover::before {
+            transform: translateX(0);
+            width: 100%;
+            height: 100%;
+            color: white;
+
+        }
+
+        .btn-90:hover {
+            color: transparent;
+            color: white;
+        }
+    
+
+    /*Boton de cerrar*/
+    .btn-close {
+        background-color: white;
+        transition: all 0.5s 0s;
+    }
+
+        .btn-close>svg {
+            color: var(--color-primario);
+        }
+
+    /*Boton Menu*/
+    .btn-menu {
+        color: white;
+        padding: 0px 0px 0px 0px;
+        overflow: hidden;
+        width: auto;
+        font-size: 5rem;
+        line-height: 3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        z-index: 0;
+    }
+
+    .btn-menu::before {
+        content: "";
+        margin-right: 1rem; 
+        background-color: white;
+        width: 2px;
+        height: 5rem;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: all 0.3s 
+        
+    }
+
+    .btn-menu:hover::before {
+        transform: translateY(0%);
+        width: 2px;
+        height: 5rem;
+    }
 
 
+    .btn-menu:hover {
+        color: var(--color-primario);
+        -webkit-text-stroke: 1px white;
+        transition: all 0.3s;
+    }
 
+    /*Boton redes sociales*/
+    .btn-social {
+        color: var(--color-primario);
+        font-size: 1.2rem;
+        background-color: white;
+        height: 3rem;
+        width: 3rem;
+        gap: 10px;
+        transition: all 0.5s 0s;
+    }
+
+        .btn-social>svg {
+            width: 1.2rem;
+            height: auto;
+            fill: currentColor;
+        }
+    
 
 
 /*CABECERA*/
@@ -27,15 +155,8 @@ header {
 }
 
     /*Animaciones*/
-    [popover]{
-        animation:scale-up-hor-left .4s cubic-bezier(.39,.575,.565,1.000) both;
- 
-    }
     @keyframes scale-up-hor-left{0%{transform:scaleX(.4);transform-origin:0 0}100%{transform:scaleX(1);transform-origin:0 0}}
 
-    #menu *{
-        animation:fade-in .4s cubic-bezier(.39,.575,.565,1.000) 0.4s both;
-    }
     @keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 
     /*Cabecera derecha*/
@@ -43,10 +164,9 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 5vw;
-        background-color: brown;
+        width: 5rem;
+        background-color: white;
     }
-
 
     /*Cabecera izquierda*/
     header .header-left {
@@ -55,36 +175,65 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 2rem 0px;
-        width: 5vw;
-        background-color: red;
+        width: 5rem;
+        background-color: white;
     }
 
-    header .header-left>picture>img {
-        height: 250px;
+    header .header-left>svg {
+        height: 10rem;
+        fill: var(--color-primario);
     }
 
     /*Menu*/
     [popover]:popover-open {
         display: flex;
+        animation:scale-up-hor-left .4s cubic-bezier(.39,.575,.565,1.000) both;
     }
 
-
-
    #menu {
+        overflow: hidden;
         flex-direction: row;
         align-items: center;
-        width: 100vw;
+        justify-content: space-between;
+        width: 100%;
         height: 100vh;
-        padding: 0vw 5vw;
         border: 0;
-        background-color: var(--color-primario);        
+        background-color: var(--color-primario);  
+    }
+
+    #menu>form {
+        padding-left: 5vw;
+    }
+
+    #menu>section {
+        display: flex;
+        height: 25vw;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        padding-right: 5vw;
     }
 
     #menu>nav>form {
+        position: relative;
         display: flex;
         flex-direction: column;
+        align-items: start;
         gap: 2rem;
-        margin: 25vw;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    #menu *{
+        animation:fade-in .4s cubic-bezier(.39,.575,.565,1.000) 0.4s both;
+    }
+
+    #social {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 1rem;
     }
 
 
@@ -98,6 +247,6 @@ header {
         scroll-snap-align: center;
         scroll-snap-stop: normal;
         scroll-margin: 0;
-        width: calc(100% - (5vw*2));
+        width: calc(100% - (5rem*2));
         margin: auto;
     }
