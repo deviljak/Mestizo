@@ -185,6 +185,8 @@ header {
         padding: 2rem 0;
         width: 5rem;
         background-color: white;
+        border-width: 2px 0px 0px 0px ;
+        border: solid var(--color-primario);
     }
 
     header .header-left>svg {
@@ -247,25 +249,38 @@ header {
 
 /*Contenido*/
 .contenedor {
-    scroll-snap-type: x mandatory;
-    scroll-padding: auto;
 }
 
     .slide {
-        scroll-snap-align: center;
-        scroll-snap-stop: normal;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         scroll-margin: 0;
-        width: calc(100% - (5rem*2));
+        overflow: hidden;
+        width: calc(100% - (7.5rem*2));
         margin: auto;
     }
 
         .uno {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        color: var(--color-secundario);
-        font-size: 40px;
-        background-clip: ;
-        background: url("assets/stark_slide1.jpg") no-repeat fixed;
+        color: var(--color-primario);
+        font-size: 60px;
+        margin: auto;
+        }
+
+        .uno>picture {
+            overflow: hidden;
+            height: 100vh;
+            width: 50%;
+        }
+
+        .uno>picture>img {
+            transform: translate(-50%);
+        }
+
+        .dos {
+
         }
