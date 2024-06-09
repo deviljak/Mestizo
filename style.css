@@ -1,6 +1,7 @@
 :root {
     --color-primario: #161616;
-    --color-secundario: white;
+    --color-secundario: #ffffff;
+    --color-gris: #f7f7f7;
 }
 
 * {
@@ -14,20 +15,27 @@
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    width: 0;
 }
 
+html {
+    width: 100vw;
+}
 
 body {
-    cursor: url('assets/cursor.svg'), auto;
+    user-select: none;
+    background-color: white;
 }
-
-
 
 /*BOTONES*/
 
+p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
 button {
-    cursor: url('assets/cursor.svg'), auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,12 +45,13 @@ button {
     box-shadow: none;
     border: none;
     overflow: hidden;
+    font-size: 0.8rem;
 }
 
     /*Boton 90°*/
     .btn-90 {
         color: var(--color-primario);
-        background-color: rgb(247, 247, 247);
+        background-color: var(--color-gris);
         width: 2.5rem;
         text-transform: uppercase;
         font-weight: 500;
@@ -57,7 +66,7 @@ button {
         .btn-90>svg {
             transform: rotate(90deg);
         }
-        
+
         .btn-90::before  {
             content: '';
             position: absolute;
@@ -75,14 +84,14 @@ button {
             transform: translateX(0);
             width: 100%;
             height: 100%;
-            color: white;
+            color: var(--color-secundario);
 
         }
 
         .btn-90:hover {
             color: var(--color-secundario);
         }
-    
+
 
     /*Boton de cerrar*/
     .btn-close {
@@ -96,7 +105,7 @@ button {
 
     /*Boton Menu*/
     .btn-menu {
-        color: white;
+        color: var(--color-secundario);
         padding: 0 0 0 0;
         overflow: hidden;
         width: auto;
@@ -111,7 +120,7 @@ button {
     .btn-menu::before {
         content: "";
         margin-right: 1rem; 
-        background-color: white;
+        background-color: var(--color-secundario);
         width: 2px;
         height: 5rem;
         z-index: -1;
@@ -129,7 +138,7 @@ button {
 
     .btn-menu:hover {
         color: var(--color-primario);
-        -webkit-text-stroke: 1px white;
+        -webkit-text-stroke: 1px var(--color-secundario);
         transition: all 0.3s;
     }
 
@@ -137,7 +146,7 @@ button {
     .btn-social {
         color: var(--color-primario);
         font-size: 1.2rem;
-        background-color: white;
+        background-color: var(--color-secundario);
         height: 3rem;
         width: 3rem;
         gap: 10px;
@@ -150,6 +159,17 @@ button {
             fill: currentColor;
         }
     
+    .btn-social-2 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn-social-2>svg {
+        width: 1rem;
+        height: auto;
+        fill: var(--color-secundario);
+    }
+
 
 
 /*CABECERA*/
@@ -171,10 +191,33 @@ header {
     header .header-right {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 5rem;
-        background-color: white;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        background-color:var(--color-primario);
+        gap: 1rem;
     }
+
+        .header-right>p {
+            color: var(--color-secundario);
+            writing-mode: vertical-lr;
+            transform: rotate(360deg);
+            width: 2.5rem;
+            line-height: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .header-right>form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .header-right>div {
+            width: 2px;
+            height: 2rem;
+            background-color: var(--color-secundario);
+        }
 
     /*Cabecera izquierda*/
     header .header-left {
@@ -184,9 +227,10 @@ header {
         align-items: center;
         padding: 2rem 0;
         width: 5rem;
-        background-color: white;
-        border-width: 2px 0px 0px 0px ;
-        border: solid var(--color-primario);
+        background-color: var(--color-secundario);
+        border-width: 0 2px 0 0;
+        border-style: solid;
+        border-color: var(--color-primario);
     }
 
     header .header-left>svg {
@@ -224,6 +268,11 @@ header {
         padding-right: 5vw;
     }
 
+    #menu>section>p {
+        color: var(--color-secundario);
+        font-size: 1.2rem;
+    }
+
     #menu>form {
         position: relative;
         display: flex;
@@ -248,39 +297,20 @@ header {
 
 
 /*Contenido*/
-.contenedor {
+.slide {
+    display: block;
+    align-content: center;
+    margin: 0 2rem 0 5rem;
+    height: 100vh;
 }
-
-    .slide {
+    .uno {
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        scroll-margin: 0;
-        overflow: hidden;
-        width: calc(100% - (7.5rem*2));
-        margin: auto;
-    }
-
-        .uno {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        color: var(--color-primario);
-        font-size: 60px;
-        margin: auto;
-        }
-
-        .uno>picture {
-            overflow: hidden;
+        font-size: 4rem;
+        margin-left: 1rem;
+    }
+        .uno>img {
             height: 100vh;
-            width: 50%;
-        }
-
-        .uno>picture>img {
-            transform: translate(-50%);
-        }
-
-        .dos {
-
         }
