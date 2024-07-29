@@ -135,7 +135,7 @@ button {
         width: 2px;
         height: 5rem;
         z-index: -1;
-        transform: translateY(-110%);
+        transform: translateY(100vh);
         transition: all 0.3s 
         
     }
