@@ -185,11 +185,9 @@ button {
 /*CABECERA*/
 header {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     position: fixed;
     height: 100vh;
-    width: 100vw;
 }
 
     /*Animaciones*/
@@ -198,7 +196,7 @@ header {
     @keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 
     /*Cabecera derecha*/
-    header .header-right {
+    .header-right {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -206,6 +204,7 @@ header {
         width: 2rem;
         background-color:var(--color-primario);
         gap: 1rem;
+        right: 0;
     }
 
         .header-right>p {
